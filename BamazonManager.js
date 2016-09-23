@@ -8,7 +8,7 @@ var connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
     user: "root", //Your username
-    password: "unclabootcamp", //Your password
+    password: "uclabootcamp", //Your password
     database: "Bamazon"
 })
 
@@ -25,7 +25,7 @@ connection.connect(function(err) {
 var start = function() {
     inquirer.prompt({
         name: "action",
-        type: "input",
+        type: "list",
         message: "Adding new product",
         choices: ["view product inventory", "view low inventory", "re-stock","add new product"]
     }).then(function(answer) {
